@@ -70,11 +70,21 @@ class Client implements Factory
         return $this;
     }
 
+    protected function name(): string
+    {
+        return $this->getName();
+    }
+
     /**
      * @param  bool  $withDataSet
      * @return string
      */
     protected function getName(bool $withDataSet = true): string
+    {
+        return '';
+    }
+
+    protected static function dataName()
     {
         return '';
     }
